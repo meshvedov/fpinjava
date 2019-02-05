@@ -57,8 +57,8 @@ public class CollectionUtilities {
   public static <T, U> U foldRight(List<T> ts,
                                    U identity,
                                    Function<T, Function<U, U>> f) {
-    return ts.isEmpty() ? identity : f.apply(head(ts)).apply(
-        foldRight(tail(ts), identity, f));
+    return ts.isEmpty() ? identity
+                        : f.apply(head(ts)).apply(foldRight(tail(ts), identity, f));
   }
 
   public static <T> List<T> append(List<T> list, T t) {

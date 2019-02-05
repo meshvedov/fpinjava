@@ -14,6 +14,6 @@ public class ComposeAllTest {
   @Test
   public void testComposeAll() {
     Function<Integer, Integer> add = y -> y + 1;
-    assertEquals(Integer.valueOf(500), ComposeAll.composeAll(CollectionUtilities.map(range(0, 500), x -> add)).apply(0));
+    assertEquals(Integer.valueOf(10000), ComposeAll.composeAll(CollectionUtilities.map(range(0, 10000), x -> add)).apply(0));
   }
 }
